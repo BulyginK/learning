@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.padding {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.v-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.slider__wrapper {
+    position: relative;
+}
+
+.slider__arrow-bord {
+    position: absolute;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    opacity: .5;
+    background-color: rgba(16,0,43,.1);
+    border-radius: 50%;
+    border: 1px solid black;
+    transition: all .2s ease;
+    z-index: 5;
+}
+
+.slider__arrow {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.slider__arrow-bord:hover {
+    transform: scale(1.2);
+    background-color: rgba(16,0,43,.15);
+}
+
+.prev {
+    transform: rotate(180deg);
+}
+
+.next {
+    right: 30px;
+}
+
+.slider__grid {
+    overflow: hidden;
+}
+
+.slider__list {
+    display: flex;
+    align-items: center;
+    width: 9999px;
+    list-style: none;
+    transition: margin-left 250ms;
+}
+
+.slider__banner {
+    display: flex;
+    width: 1000px;
+    padding: 40px 70px;
+    /* box-sizing: border-box; */
+    justify-content: space-around;
+}
+
+.slider__banner__info {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.slider__banner__h {
+    padding-bottom: 30px;
+    font: bold 54px/60px 'Open Sans', sans-serif;
+    color: rgb(82, 82, 82);
+}
+
+.slider__banner__text {
+    padding-bottom: 30px;
+    font: 24px/24px 'Titillium Web', sans-serif;    
+}
+    
+.slider__banner__button {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    font: 16px/16px 'Open Sans', sans-serif;
+    border: 2px solid rgb(16, 69, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__list a {
+    text-decoration: none;
+    color: #000;
+}
+
+.slider__banner__button:hover {
+    box-shadow: 0 9px 9px rgb(0 0 0 / 28%);
+    border: 2px solid rgb(16, 69, 90);
+}
+
+.slider__banner__img-box {
+    width: 45%;
+}
+
+.slider__banner__img-start {
+    display: none;
+    width: 20%;
+    padding-bottom: 10px;
+}
+
+.slider__banner__img-start img {
+    width: 200px;
+}
+
+.slider__banner__img-back {
+    display: none;
+}
+
+.slider__banner__img {
+    width: 100%;
+    object-fit: contain;
+    transition: 1s;
+}
+
+.slider__banner__img:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1199px) {
+    .slider__banner__info {
+        width: 40%;
+    }
+
+    .slider__banner__img-box {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1119px) {
+    .slider__banner {
+        justify-content: start;
+    }
+
+    .slider__banner__info {
+        width: 45%;   
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .slider__banner__info {
+        width: 40%;
+    }
+
+    .slider__banner__img-box {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .slider__banner {
+        width: 1040px;
+        padding: 10px 50px;
+    }
+
+    .slider__banner__h {
+        font: bold 45px/50px 'Open Sans', sans-serif;
+    }
+
+    .slider__banner__text {
+        font: 20px/20px 'Titillium Web', sans-serif;    
+    }
+}
+
+@media screen and (max-width: 929px) {    
+    .slider__banner {
+        padding: 30px 50px;
+    }
+
+    .slider__banner__info {
+        width: 35%;
+    }
+
+    .slider__banner__img-box {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 849px) {    
+    .slider__banner {
+        padding: 50px 50px;
+    }
+
+    .slider__banner__h {
+        font: bold 35px/45px 'Open Sans', sans-serif;
+    }
+
+    .slider__banner__text {
+        font: 20px/20px 'Titillium Web', sans-serif;    
+    }
+
+    .slider__banner__info {
+        width: 30%;
+    }
+
+    .slider__banner__img-box {
+        width: 30%;
+    }
+
+    .slider__arrow-bord {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 749px) {    
+    .slider__banner {
+        padding: 50px 50px;
+    }
+    
+    .slider__banner__h {
+        font: bold 30px/30px 'Open Sans', sans-serif;
+    }
+
+    .slider__banner__text {
+        font: 18px/24px 'Titillium Web', sans-serif;    
+    }
+
+    .slider__banner__info {
+        width: 25%;
+    }
+
+    .slider__banner__img-box {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 649px) {  
+    .slider__banner {
+        width: 1120px;
+        padding: 20px 10px;
+    }
+
+    .slider__banner__info {
+        width: 35%;
+        position: relative;
+    }
+    
+    .slider__banner__text {
+        width: 80%;
+    }
+
+    .slider__banner__img-box {
+        display: none;
+    }
+
+    .slider__arrow-bord {
+        top: 77%;
+    }
+
+    .arrow-left {
+        right: 20%;
+    }
+
+    .slider__banner__img-back {
+        display: block;
+        position: absolute;
+        width: 100%;
+        object-fit: contain;
+        left: 80%;
+        z-index: -2;
+    }
+
+    .slider__banner__img-back img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:569px) { 
+    .slider__banner__info {
+        width: 35%;
+    }
+    
+    .slider__banner__h {
+        font: bold 24px/28px 'Open Sans', sans-serif;
+    }
+    
+    .slider__banner__img-back {
+        display: block;
+        position: absolute;
+        width: 100%;
+        object-fit: contain;
+        left: 60%;
+        z-index: -2;
+    }
+
+    .slider__banner__img-back img {
+        width: 50%;
+        opacity: .5;
+    }
+}
+
+@media screen and (max-width: 489px) {
+    .slider__banner__img-start {
+        display: block;
+    }
+    
+    .slider__banner__info {
+        width: 30%;
+    }
+
+    .slider__banner__button {
+        width: 150px;
+        height: 40px;
+    }
+    
+    .slider__banner__img-back {
+        display: none;
+    }
+
+    .slider__arrow-bord {
+        top: 85%;
+    }
+}

@@ -1,0 +1,207 @@
+.actual__wrapper {
+    /* background-color: rgba(210, 233, 247, 0.356); */
+    background-image: url(../img/yola_original.jpg);
+}
+
+.actual {
+    padding: 50px 50px 50px 0;
+}
+
+.actual__h {
+    font: bold 32px/24px 'Nunito', sans-serif;
+    padding-left: 30px;
+    margin-bottom: 50px;
+    color: #FFF;
+}
+
+.actual__vertical {
+    display: block;
+}
+
+.actual__grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actual__item {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin-left: 50px;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 255, 255);
+    transition-duration: .2s;
+    background-color: #FFFFFF10;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.actual__item:hover {
+    box-shadow: 0 0 25px 20px rgba(0, 0, 0, 0.171);
+}
+
+.actual__img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+} 
+
+.actual__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.actual__info__type {
+    font: 18px/18px 'Nunito', sans-serif;
+    padding-bottom: 20px;
+}
+
+.actual__info__h {
+    font: bold 20px/20px 'Nunito', sans-serif;
+    padding-bottom: 20px;
+}
+
+.actual__info__text {
+    font: 16px/16px 'Nunito', sans-serif;
+    padding-bottom: 20px;
+}
+
+.actual__info__reaction {
+    padding-top: 10px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actual__info__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 40px;
+    /* margin-right: 30px; */
+    border-radius: 8px;
+    font: 16px/16px 'Nunito', sans-serif;
+    border: 2px solid rgb(163, 163, 163);
+    background-color: #FFF;
+}
+
+.actual__info__button:hover {
+    border: 2px solid rgb(51, 51, 51);
+    background-color: #FFF;
+}
+
+.actual__info__button a {
+    text-decoration: none;
+    color: rgb(163, 163, 163);
+    font: bold 16px/16px 'Nunito', sans-serif;
+}
+
+.actual__info__button:hover a {
+    color: rgb(0, 0, 0);
+}
+
+.actual__info__detail {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding-right: 5%;
+    font: bold 16px/16px 'Nunito', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.actual__info__detail::after {
+    content: "";
+    position: absolute;
+    transition: .3s ease;
+    color: rgb(0, 0, 0)
+}
+
+.actual__info__detail:hover:after {
+    top: 5px;
+    right: 1px;
+    width: 4px;
+    height: 4px;
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    transform: translateY(-10%) rotate(-135deg);
+}
+
+.actual__horizontal {
+    display: none;
+}
+
+
+@media screen and (max-width: 1059px) {
+    .actual {
+        padding: 50px;
+    }
+
+    .actual__h {
+        padding: 0;
+    }
+    
+    .actual__vertical {
+        display: none;
+    }
+
+    .actual__horizontal {
+        display: block;
+    }
+
+    .actual__grid {
+        flex-direction: column;
+    }
+
+    .actual__item {
+        width: 100%;
+        flex-direction: row;
+        margin: 0 0 30px 0;
+        justify-content: space-between;
+    }
+
+    .actual__info {
+        width: 50%;
+    }
+
+    .actual__info__reaction {
+        justify-content: start;
+    }
+
+    .actual__info__detail {
+        padding-left: 30px;
+    }
+
+    .actual__img {
+        width: 300px;
+        border-radius: 0 15px 15px 0;
+    }
+}
+
+@media screen and (max-width:799px) {
+    .actual__vertical {
+        display: block;
+    }
+
+    .actual__horizontal {
+        display: none;
+    }
+
+    .actual__item {
+        flex-direction: column;
+        margin: 0 0 30px 0;
+        justify-content: space-between;
+    }
+
+    .actual__info {
+        width: 85%;
+    }
+
+    .actual__img {
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+} 
